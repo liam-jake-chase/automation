@@ -67,4 +67,10 @@ describe("template spec", { testIsolation: false }, () => {
     cy.get('[src="./assets/LiamJChaseResumeWebQATS-1.png"]').should("exist");
     cy.get('[src="./assets/LiamJChaseResumeWebQATS-2.png"]').should("exist");
   });
+
+  it("Validate that email link exists and goes to correct address", () => {
+    cy.get('[data-cy="email-link"]')
+      .should("have.attr", "href")
+      .and("includes", "liam.jake.chase@gmail.com");
+  });
 });
