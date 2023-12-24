@@ -28,39 +28,43 @@ describe("template spec", { testIsolation: false }, () => {
   it("Ensures the buttons for Page and Code have the correct url", () => {
     cy.get('[data-cy="card-button-page"]')
       .eq(0)
-      .should('have.attr', 'href')
-      .and('include', '/flowersbybees')
-      cy.get('[data-cy="card-button-code"]')
+      .should("have.attr", "href")
+      .and("include", "/flowersbybees");
+    cy.get('[data-cy="card-button-code"]')
       .eq(0)
-      .should('have.attr', 'href')
-      .and('include', 'liam-jake-chase/flowersbybees')
-      
-      cy.get('[data-cy="card-button-page"]')
+      .should("have.attr", "href")
+      .and("include", "liam-jake-chase/flowersbybees");
+
+    cy.get('[data-cy="card-button-page"]')
       .eq(1)
-      .should('have.attr', 'href')
-      .and('include', '/muews')
-      cy.get('[data-cy="card-button-code"]')
+      .should("have.attr", "href")
+      .and("include", "/muews");
+    cy.get('[data-cy="card-button-code"]')
       .eq(1)
-      .should('have.attr', 'href')
-      .and('include', 'liam-jake-chase/muews')
+      .should("have.attr", "href")
+      .and("include", "liam-jake-chase/muews");
 
-      cy.get('[data-cy="card-button-page"]')
+    cy.get('[data-cy="card-button-page"]')
       .eq(2)
-      .should('have.attr', 'href')
-      .and('include', 'vancouverislandbarberco.ca')
-      cy.get('[data-cy="card-button-code"]')
+      .should("have.attr", "href")
+      .and("include", "vancouverislandbarberco.ca");
+    cy.get('[data-cy="card-button-code"]')
       .eq(2)
-      .should('have.attr', 'href')
-      .and('include', 'liam-jake-chase/vibc')
+      .should("have.attr", "href")
+      .and("include", "liam-jake-chase/vibc");
 
-      cy.get('[data-cy="card-button-page"]')
+    cy.get('[data-cy="card-button-page"]')
       .eq(3)
-      .should('have.attr', 'href')
-      .and('include', '/Bandsite')
-      cy.get('[data-cy="card-button-code"]')
+      .should("have.attr", "href")
+      .and("include", "/Bandsite");
+    cy.get('[data-cy="card-button-code"]')
       .eq(3)
-      .should('have.attr', 'href')
-      .and('include', 'liam-jake-chase/Bandsite')
+      .should("have.attr", "href")
+      .and("include", "liam-jake-chase/Bandsite");
+  });
 
+  it("Validates the resume is visible", () => {
+    cy.get('[src="./assets/LiamJChaseResumeWebQATS-1.png"]').should("exist");
+    cy.get('[src="./assets/LiamJChaseResumeWebQATS-2.png"]').should("exist");
   });
 });
