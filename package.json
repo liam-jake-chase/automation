@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:test": "cypress run",
+    "cy:run": "cypress run --spec 'cypress/e2e/portfolio.js.spec'",
+    "cy:verify": "cypress verify"
+  }
+}
