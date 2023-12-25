@@ -1,4 +1,4 @@
-describe("template spec", { testIsolation: false }, () => {
+describe("Portfolio validation tests", { testIsolation: false }, () => {
   it("Opens the portfolio page", () => {
     cy.visit("http://liamjakechase.com");
   });
